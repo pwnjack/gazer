@@ -32,9 +32,9 @@ class UsersRepository {
 		$data = array('email' => $userData->email,
 				'username' => $userData->nickname,
 				'fullname' => $userData->name,
-				'location' => $userData->user['location'],
-				'bio' => $userData->user['bio'],
-				'company' => $userData->user['company'],
+				'location' => @$userData->user['location'],
+				'bio' => @$userData->user['bio'],
+				'company' => @$userData->user['company'],
 				'avatar' => $userData->avatar,
 				'github_id' => $userData->id
 				);
