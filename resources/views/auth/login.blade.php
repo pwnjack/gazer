@@ -18,8 +18,16 @@
 						</div>
 					@endif
 
+
 					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+						<div class="form-group">
+							<label class="col-md-4 control-label"></label>
+							<div class="col-md-6">
+								<a href="/github" class="btn btn-primary btn-block"><i class="fa fa-github fa-fw"></i> &nbsp;Login with github</a>
+							</div>
+						</div>
 
 						<div class="form-group">
 							<label class="col-md-4 control-label">E-Mail Address</label>

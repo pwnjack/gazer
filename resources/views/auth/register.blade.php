@@ -22,6 +22,13 @@
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 						<div class="form-group">
+							<label class="col-md-4 control-label"></label>
+							<div class="col-md-6">
+								<a href="/github" class="btn btn-primary btn-block"><i class="fa fa-github fa-fw"></i> &nbsp;Register with github</a>
+							</div>
+						</div>
+
+						<div class="form-group">
 							<label class="col-md-4 control-label">Name</label>
 							<div class="col-md-6">
 								<input type="text" class="form-control" name="name" value="{{ old('name') }}">

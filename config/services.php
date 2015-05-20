@@ -35,4 +35,11 @@ return [
 		'secret' => '',
 	],
 
+	'github' => [
+		'client_id'  		=> '0e4e7b83d64bcbe62576',
+		'client_secret' 	=> 'a3d0c56708557dce9df3574401c8bf44ef0a74ce',
+		'redirect' 			=> 'http://gazer.io/github',
+	],
+
+
 ];

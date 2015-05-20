@@ -145,6 +145,11 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
+		//Gazer specific package providers
+		'Laracasts\Flash\FlashServiceProvider',
+		'Illuminate\Html\HtmlServiceProvider',
+		'Laravel\Socialite\SocialiteServiceProvider',
+
 	],
 
 	/*
@@ -192,6 +197,12 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+
+		//Gazer specific alias packages
+		'HTML'=> 'Illuminate\Html\HtmlFacade',
+		'Flash' => 'Laracasts\Flash\Flash',
+		'Socialite'      => 'Laravel\Socialite\Facades\Socialite',
+
 
 	],
 
