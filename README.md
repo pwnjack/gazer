@@ -5,14 +5,15 @@ Bug tracking made easy
 	- Branches
 - Users
 	- Groups
-- Bugs
+	- Role
+- Bugs/Issues
 	- Title
 	- Comments
 	- Priority (Low, Normal, High)
 	- Assignee (User, Group)
 	- File attachment (Screenshot, Document)
 	- Status (Open, Working, Solved)
-
+	- Labels (Wont Fix, ?)
 - Github integration
 - Time tracking (from status to status)
 - Invoicing
