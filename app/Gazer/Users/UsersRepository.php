@@ -29,24 +29,15 @@ class UsersRepository {
 
 	public function createUserFromGithub($userData)
 	{
-		$data = array('email' => $userData->email,
-				'username' => $userData->nickname,
-				'fullname' => $userData->name,
-				'location' => @$userData->user['location'],
-				'bio' => @$userData->user['bio'],
-				'company' => @$userData->user['company'],
-				'avatar' => $userData->avatar,
-				'github_id' => $userData->id
-				);
 
 		$user = new User;
 
 		$user->email 		= $userData->email;
 		$user->username 	= $userData->nickname;
 		$user->fullname 	= $userData->name;
-		$user->location 	= $userData->user['location'];
-		$user->bio 			= $userData->user['bio'];
-		$user->company 		= $userData->user['company'];
+		$user->location 	= @$userData->user['location'];
+		$user->bio 			= @$userData->user['bio'];
+		$user->company 		= @$userData->user['company'];
 		$user->avatar 		= $userData->avatar;
 		$user->github_id 	= $userData->id;
 
