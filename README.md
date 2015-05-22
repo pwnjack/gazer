@@ -17,3 +17,15 @@ Bug tracking made easy
 - Github integration
 - Time tracking (from status to status)
 - Invoicing
+
+
+- 3rd party integrations (local and SaaS)
+	- Authentication - github
+	- Queue : Beanstalkd, Supervisord
+	- Real-time push : Redis
+	- Storage : Amazon S3 through FlySystem
+	- Mail : Amazon SeS though L5 
+	- WebRTC : Icecomm
+	- GanttCharts
+	- File browser with WebRtc Editing
+	- EasyRTC

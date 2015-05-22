@@ -54,6 +54,21 @@ class UsersRepository {
 	}
 
 
+	public function getFromIdWithProjects($id)
+	{
+		return User::with('projects.creator')->whereId($id)->first();
+	}
+
+	public function getFromId($id)
+	{
+		return User::with('projects', 'friends')->whereId($id)->first();
+	}
+
+	public function getAllForSelect()
+	{
+		return User::lists('username', 'id');
+	}
+
 
 
 }

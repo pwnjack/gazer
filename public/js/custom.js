@@ -1,0 +1,1 @@
+$('select.make-awesome').select2();

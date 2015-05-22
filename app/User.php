@@ -32,4 +32,45 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 */
 	protected $hidden = ['password', 'remember_token'];
 
+
+	public function projects()
+	{
+		return $this->belongsToMany('Gazer\Models\Projects', 'project_user', 'user_id', 'project_id');
+	}
+
+	public function boards()
+	{
+		return $this->hasMany('Gazer\Models\Board');
+	}
+
+	public function branches()
+	{
+		return $this->hasMany('Gazer\Models\Branches');
+	}
+
+	public function attachments()
+	{
+		return $this->morphMany('Gazer\Models\Attachments', 'attachable');
+	}
+
+	public function bugsOpened()
+	{
+		return $this->hasMany('Gazer\Models\Bugs');
+	}
+
+	public function bugsAssigned()
+	{
+		return $this->hasMany('Gazer\Models\Bugs', 'assignee_id');
+	}
+
+	public function groups()
+	{
+		return $this->belongsToMany('Gazer\Models\Groups', 'group_user', 'group_id', 'user_id');
+	}
+
+	public function friends()
+	{
+		return $this->belongsToMany('App\User', 'friends', 'user_id', 'friend_id');
+	}
+
 }
