@@ -1,6 +1,13 @@
 <?php
 
 
+// Event::listen('illuminate.query', function($query, $params, $time, $conn) 
+// { 
+//     Log::info(array($query, $params, $time, $conn));
+// });
+
+
+
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
@@ -36,7 +43,7 @@ Route::get('projects/create', [
 	'uses'	=> 'ProjectsController@create'
 	]);
 
-Route::post('projects/store', [
+Route::post('projects/create', [
 	'as' 	=> 'projects_store',
 	'uses'	=> 'ProjectsController@store'
 	]);
@@ -100,22 +107,22 @@ Route::post('bugs/store', [
 	'uses'	=> 'BugsController@store'
 	]);
 
-Route::get('bugs/{slug}', [
+Route::get('bugs/{id}', [
 	'as' 	=> 'bugs_show',
 	'uses'	=> 'BugsController@show'
 	]);
 
-Route::get('bugs/{slug}/edit', [
+Route::get('bugs/{id}/edit', [
 	'as' 	=> 'bugs_edit',
 	'uses'	=> 'BugsController@edit'
 	]);
 
-Route::post('bugs/{slug}/edit', [
+Route::post('bugs/{id}/edit', [
 	'as' 	=> 'bugs_update',
 	'uses'	=> 'BugsController@update'
 	]);
 
-Route::post('bugs/{slug}/delete', [
+Route::post('bugs/{id}/delete', [
 	'as' 	=> 'bugs_update',
 	'uses'	=> 'BugsController@destroy'
 	]);

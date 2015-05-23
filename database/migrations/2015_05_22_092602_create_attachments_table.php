@@ -20,6 +20,8 @@ class CreateAttachmentsTable extends Migration {
 			$table->integer('user_id');
 			$table->string('title');
 			$table->text('description')->nullable();
+			$table->string('url');
+			$table->string('filetype')->nullable();
 			$table->timestamps();
 		});
 	}

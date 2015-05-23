@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="col-md-10 col-md-offset-1">
 			<div class="panel panel-default">
-				<div class="panel-heading">Projects</div>
+				<div class="panel-heading">Projects <span class="pull-right"><a href="/projects/create"><i class="fa fa-plus"></i>&nbsp;&nbsp; Create a new project</a></span></div>
 
 				<div class="panel-body">
 				
@@ -13,7 +13,7 @@
 
 				<ul>
 					@foreach($user['projects'] as $project)
-						<li>{{link_to_route('projects_show', $project['name'], array('slug' => $project['slug']))}} by {{link_to_route('users_show', $project['author']['username'], array('username' => $project['author']['username']))}} since {{$project['created_at']->diffForHumans()}}</li>
+						<li>{!!link_to_route('projects_show', $project['title'], array('slug' => $project['slug']))!!} by {!!link_to_route('users_show', $project['creator']['username'], array('username' => $project['creator']['username']))!!} since {{$project['created_at']->diffForHumans()}} @if($project['user_id'] == \Auth::user()->id) - {!!link_to_route('projects_edit', 'Edit', array('slug' => $project['slug']))!!} @endif</li>
 					@endforeach
 				</ul>
 

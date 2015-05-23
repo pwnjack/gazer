@@ -149,6 +149,7 @@ return [
 		'Laracasts\Flash\FlashServiceProvider',
 		'Illuminate\Html\HtmlServiceProvider',
 		'Laravel\Socialite\SocialiteServiceProvider',
+		'GrahamCampbell\Flysystem\FlysystemServiceProvider',
 
 	],
 
@@ -203,6 +204,7 @@ return [
 		'Flash' => 'Laracasts\Flash\Flash',
 		'Socialite'      => 'Laravel\Socialite\Facades\Socialite',
 		'Form'=> 'Illuminate\Html\FormFacade', 
+		'Flysystem' => 'GrahamCampbell\Flysystem\Facades\Flysystem'
 
 
 	],

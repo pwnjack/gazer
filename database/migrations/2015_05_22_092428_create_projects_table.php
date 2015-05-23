@@ -23,6 +23,7 @@ class CreateProjectsTable extends Migration {
 			$table->string('repository_url')->nullable;
 			$table->datetime('start');
 			$table->datetime('end');
+			$table->integer('active')->default(1);
 			$table->timestamps();
 		});
 	}
