@@ -29,3 +29,4 @@ Bug tracking made easy
 	- GanttCharts
 	- File browser with WebRtc Editing
 	- EasyRTC
+	- https://github.com/PushmanPHP/pushman
